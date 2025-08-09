@@ -63,6 +63,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://umami.adclosenn.top/share/XMDJoIb1D21UxHdH", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
+		{
+			name: "状态信息",
+			url: "https://status.adclosenn.top", // Internal links should not include the base path, as it is automatically added
+			external: true, // Show an external link icon and will open in a new tab
+		},
 	],
 };
 
@@ -86,9 +91,19 @@ export const profileConfig: ProfileConfig = {
 			url: "https://steamcommunity.com/id/Ad_closeNN",
 		},
 		{
+			name: "Discord",
+			icon: "fa6-brands:discord",
+			url: "https://discord.com/users/1068060784300658688",
+		},
+		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/Ad-closeNN",
+		},
+		{
+			name: "Email",
+			icon: "ic:sharp-email",
+			url: "mailto:1709301095@qq.com",
 		},
 	],
 };
