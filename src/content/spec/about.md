@@ -1,7 +1,7 @@
 # 关于 / Hi there!
 既然你来到了这里，就说明你在访问由 [Netlify](https://www.netlify.com) 托管的 [adclosenn.top](https://adclosenn.top)。本站 Netlify 优选 IP：`3.33.186.135`
 
-本站使用 [@satcaca/fuwari](https://github.com/saicaca/fuwari) 博客模板，部分代码来源于 [@afoim/fuwri](https://github.com/afoim/fuwar)。嗯，真漂亮，真好用。
+本站使用 [@satcaca/fuwari](https://github.com/saicaca/fuwari) 博客模板，部分代码来源于 [@afoim/fuwari](https://github.com/afoim/fuwari)。嗯，真漂亮，真好用。
 
 ::github{repo="saicaca/fuwari"}
 ::github{repo="withastro/astro"}

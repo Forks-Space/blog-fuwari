@@ -1,0 +1,92 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<MainGridLayout title="友情链接">
+    <div class="card-base p-6 md:p-8">
+        <div class="flex items-center gap-2 mb-6">
+            <div class="h-8 w-8 rounded-lg bg-[var(--primary)] flex items-center justify-center text-white dark:text-black/70">
+                <Icon name="material-symbols:diversity-3" class="text-[1.5rem]">
+            </div>
+            <h1 class="text-2xl font-bold text-black dark:text-white">友情链接</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <a href="https://www.netlify.com/" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://www.netlify.com/favicon.ico" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">Netlify（本站托管平台）</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">AWS CDN，优选后简直不要太香！</div>
+            </a>
+
+            <a href="https://github.com/saicaca/fuwari" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="/assets/favicon/saicaca.png" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">fuwari（本站使用的模板）</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">使用 Astro 构建的静态博客模板</div>
+            </a>
+            
+            <a href="https://chatgpt.com" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://cdn.oaistatic.com/assets/favicon-l4nq08hd.svg" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">ChatGPT</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">这玩意难道有时候不比脑子好使？</div>
+            </a>
+            
+            <a href="https://code.visualstudio.com" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://code.visualstudio.com/assets/favicon.ico" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">Visual Studio Code</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">编辑器中的真神！</div>
+            </a>
+            
+            <a href="https://github.com" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="/assets/favicon/github.ico" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">GitHub</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">Build and ship software on a single, collaborative platform | 在单一协作平台上构建和交付软件</div>
+            </a>
+
+            <a href="https://hitokoto.cn" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://hitokoto.cn/favicon.ico" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">一言</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">把一些句子汇聚起来，形成一言网络，以传递更多的感动</div>
+            </a>
+
+            <a href="https://2x.nz" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://2x.nz/favicon.webp" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">AcoFork Blog</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">爱你所爱~ ❤</div>
+            </a>
+        
+        </div>
+
+        <!-- 申请友链 -->
+        <div class="sponsors-section mt-8">
+        	<h2 class="text-xl font-bold text-black dark:text-white mb-4 flex items-center gap-2">
+        		<Icon name="material-symbols:group" class="text-[1.5rem] text-[var(--primary)]"/>
+        		将您的网站加入本站友链
+        	</h2>
+        	<p class="text-sm text-black/60 dark:text-white/60">
+        		请自行提交 Issue ： <a target="_blank" href="https://github.com/Ad-closeNN/blog-friends/issues/new?title=%E5%8F%8B%E9%93%BE%E7%94%B3%E8%AF%B7%EF%BC%9A" class="transition link text-[var(--primary)] font-medium underline">点击这里提交</a>
+        	</p>
+        <br>
+    </div>
+
+</MainGridLayout>
+
+<style>
+.friend-card {
+    @apply flex flex-col gap-1 p-4 rounded-lg bg-[var(--card-bg)] hover:bg-black/5 dark:hover:bg-white/5 transition;
+}
+</style>

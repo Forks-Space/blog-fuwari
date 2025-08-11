@@ -1,5 +1,5 @@
 ---
-title: 新域名！
+title: "[置顶] 新域名！"
 published: 2099-12-31
 tags: ["域名"]
 description: 获得了一个新域名 *这使我充满了决心
@@ -9,7 +9,7 @@ draft: false
 ---
 
 # .xyz 域名
-:::note
+:::warning["注意"]
 如无特殊指代，阿里云指[阿里云（国内站）](https://wanwang.aliyun.com/domain)。
 :::
 之前在[*里云](https://wanwang.aliyun.com/domain)买了个8位纯数字的 `.xyz` 域名，现在买了 `.top` 后觉得特亏。一是在阿里云里面买任何域名都需要实名认证（14+），还得填一些实际身份的信息，我了个去，填完这些信息都够我在 Spaceship 买两次域名了，真是够麻烦的。。。
@@ -93,7 +93,7 @@ URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
 
 16:00 点后，来到 gen.xyz，填了填报告，submit了。而这居然还有坑？
 
-:::warning
+:::warning["注意"]
 当时的情况如此，并非等于现在情况。
 :::
 
