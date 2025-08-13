@@ -1,5 +1,5 @@
 ---
-title: 如何进行 Folo 订阅源认证
+title: 进行 Folo 订阅源认证
 published: 2025-08-10
 tags: ["认证", "网站"]
 description: Folo（Follow）是一个 RSS 订阅源合集软件，用它可以快速浏览新鲜事，也可以认证自己的 RSS 订阅源

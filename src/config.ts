@@ -65,7 +65,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "统计信息",
-			url: "https://umami.adclosenn.top/share/XMDJoIb1D21UxHdH", // Internal links should not include the base path, as it is automatically added
+			url: "https://umami.adclosenn.top/share/jME4HFb9JmfJM5zs", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
@@ -128,6 +128,6 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 export const umamiConfig: UmamiConfig = {
 	enable: true,
 	baseUrl: "https://umami.adclosenn.top",
-	shareId: "XMDJoIb1D21UxHdH",
+	shareId: "jME4HFb9JmfJM5zs",
 	timezone: "Asia/Shanghai",
 };
