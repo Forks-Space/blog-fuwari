@@ -23,10 +23,6 @@ customcover: ../assets/images/cloudflare-turnstile-verify-error.png
 你好~
 我的 Captcha 还蛮多的，欢迎你们来这里玩，玩累了就直接刷新，没问题的~
 
-:::NOTE[抱歉]
-现在只有两家 Captcha，后续会慢慢补上其他 Captcha 的！
-:::
-
 # Google reCaptcha V2
 ## 休闲版（不保证）
 <div class="g-recaptcha" data-sitekey="6LerBqQrAAAAAJm_8-H-wq25iSKxprYEW8G_XYhi"></div>

@@ -14,6 +14,17 @@ customcover: ../assets/images/custom-frontmatter-customcover.svg
 
 这篇文章的目的是 **在 Markdown 文件的顶端加入一个自定义的类似 `draft: true` 这类变量控制器**，可以运用它对某些组件进行更改，包括关闭、更改。例如，当你在 fuwari 中的 Markdown 顶端定义一个内置参数 `image`，你可以通过写 `image: "../assets/images/custom-frontmatter-cover.svg"` 来让这篇文章在**博客主页**获得一个图片（而不定义就只有一个 `>` 的按钮）： ![frontmatter-image-example](../assets/images/frontmatter-image-example.png)
 
+就是说：
+
+```md title="src/content/posts/custom-frontmatter.md" {3,4}
+--- # 这里是 Frontmatter 的开头
+image: /a/example.png # 官方自带的：这是原来有的这个 image:
+customcover: /a/eexxaammppllee.png  # 自己添加的：这是在如 /posts/custom-frontmatter/ 显示的文章头图
+showcover: false # 自己添加的：这是控制 是否使用 image: 定义的图片作为文章头图，默认就是会用 image: 定义的图片作为头图
+--- # 这里是 Frontmatter 的结尾
+```
+
+
 如果你足够细心，你会发现文章 [你是人类吗？](/posts/captcha/) 的图片在**博客主页**和**文章内部**是不同的。这也用到了自定义 Frontmatter，自己定义了不同的地方该显示什么图片。
 
 # 定义 Frontmatter
@@ -100,7 +111,7 @@ const postsCollection = defineCollection({
 :::CAUTION[不要照抄，除非你知道自己在做什么]
 :::
 
-```astro title="src/pages/posts/[...slug].astro" {49,52}
+```astro title="src/pages/posts/[...slug].astro" {49,52,107,112}
 ---
 import path from "node:path";
 import License from "@components/misc/License.astro";

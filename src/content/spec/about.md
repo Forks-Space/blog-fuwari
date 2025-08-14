@@ -8,7 +8,7 @@
 ::github{repo="afoim/fuwari"}
 
 # 域名
-目前你现在见到的，也就是 [adclosenn.top](https://adclosenn.top)。除了这个，我还有其他的域名（部分）：
+目前你现在见到的，也就是 [adclosenn.top](https://adclosenn.top) 。除了这个，我还有其他的域名（部分）：
 
 1. adclosenn.top
 2. 19991230.xyz
@@ -21,27 +21,34 @@
 一位住在[中华人民共和国广西壮族自治区](https://baike.baidu.com/item/%E5%B9%BF%E8%A5%BF%E5%A3%AE%E6%97%8F%E8%87%AA%E6%B2%BB%E5%8C%BA/163178)的苦逼学生。
 
 ## 爱好
-玩游戏、写代码、写博客（也许吧），哦，还有读书。只会一点 [Python](https://baike.baidu.com/item/Python/407313)，初学者罢了。
+玩游戏、写代码、写博客，哦，还有读书。只会一点 [Python](https://baike.baidu.com/item/Python/407313)，初学者罢了。
 
 ## 联系方式
-电子邮箱：[1709301095@qq.com](mailto:1709301095@qq.com) 或 [W1709301095@gmail.com](mailto:W1709301095@gmail.com)  
+电子邮箱：[1709301095@qq.com](mailto:1709301095@qq.com) 或 [admin@adclosenn.top](mailto:admin@adclosenn.top)  
 Discord：https://discord.com/users/1068060784300658688
 
 ---
 
 # 关于本站
 ## 字体
-使用的是 [MiSans VF](https://hyperos.mi.com/font)，中英文可变字重字体从官方 CDN 服务器获取。
+使用的是 [MiSans VF](https://hyperos.mi.com/font) ，中英文可变字重字体从官方 CDN 服务器获取。 
 [点此查看详情](/misans/)
 
 ## 一言
-使用的是 [一言语句接口（JSON）](https://developer.hitokoto.cn/sentence/)。`v1.hitokoto.cn`
+使用的是 [一言语句接口（JSON）](https://developer.hitokoto.cn/sentence/) 。`v1.hitokoto.cn`
 
 ## 统计信息
-使用的是自托管（[Netlify](https://www.netlify.com) + [Neon](https://neon.com)）的 [Umami](https://umami.is)。具体可查看 [手把手自托管 Umami
-](/posts/umami/)
+使用的是自托管（ [Netlify](https://www.netlify.com) + [Neon](https://neon.com)）的 [Umami](https://umami.is) 。具体可查看 [手把手自托管 Umami
+](/posts/umami/) 。
+
+## 音乐
+使用的是 [网易云音乐外链播放器（iframe 插件）](https://music.163.com/#/outchain/2/2608813264/) 。
 
 ---
+
+# 2025/8/14
+用上了大佬插件 [@rehypejs/rehype-external-links](https://www.npmjs.com/package/rehype-external-links) ，这个插件可以让仅 Markdown 文件里面定义的链接以 `target="_blank` 的形式构建。也就是通过这个插件构建出来的超链接，点击后是通过新标签页打开的。而原来原版是直接在博客里，通过覆盖你正在阅读的文章来打开链接。  
+可以试试点这两个链接进行比对： [更改后](https://www.bing.com) &nbsp;|&nbsp; <a href="https://www.bing.com">更改前</a>
 
 # 2025/8/10
 ~~1145141919**810**~~  
