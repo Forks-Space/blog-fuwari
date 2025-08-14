@@ -1,63 +1,8 @@
 @tailwind components;
 
 @layer components {
-
-    /* Windows 11 Mica 材质效果 */
-    /* 完全无噪点的纯净 Mica */
     .card-base {
-        @apply rounded-[var(--radius-large)] transition;
-        position: relative;
-        /* Mica 背景：半透明 + 噪点纹理 */
-        background:
-            /* 噪点纹理层 */
-            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0),
-            /* 基础半透明背景 */
-            rgba(255, 255, 255, 0.7);
-        background-size: 20px 20px, 100% 100%;
-        /* 背景模糊效果 */
-        backdrop-filter: blur(30px) saturate(110%) brightness(105%);
-        -webkit-backdrop-filter: blur(30px) saturate(110%) brightness(105%);
-        /* 微妙的边框 */
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        /* 轻微的阴影 */
-        box-shadow:
-            0 2px 10px rgba(0, 0, 0, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    }
-
-    /* 深色模式下的 Mica 效果 */
-    .dark .card-base {
-        background:
-            /* 深色模式噪点纹理 */
-            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0),
-            /* 深色半透明背景 */
-            rgba(32, 32, 32, 0.8);
-        background-size: 20px 20px, 100% 100%;
-        backdrop-filter: blur(30px) saturate(110%) brightness(90%);
-        -webkit-backdrop-filter: blur(30px) saturate(110%) brightness(90%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow:
-            0 2px 10px rgba(0, 0, 0, 0.3),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-
-    /* Hover 状态增强 */
-    .card-base:hover {
-        backdrop-filter: blur(40px) saturate(120%) brightness(110%);
-        -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(110%);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow:
-            0 4px 20px rgba(0, 0, 0, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    }
-
-    .dark .card-base:hover {
-        backdrop-filter: blur(40px) saturate(120%) brightness(95%);
-        -webkit-backdrop-filter: blur(40px) saturate(120%) brightness(95%);
-        border-color: rgba(255, 255, 255, 0.15);
-        box-shadow:
-            0 4px 20px rgba(0, 0, 0, 0.4),
-            inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
     }
 
     h1,
