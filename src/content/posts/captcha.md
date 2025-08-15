@@ -17,7 +17,6 @@ customcover: ../assets/images/cloudflare-turnstile-verify-error.png
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer async></script>
     <!-- hCaptcha -->
     <script src="https://hcaptcha.com/1/api.js?recaptchacompat=off&hl=zh" async defer></script>
-
 </head>
 
 你好~
