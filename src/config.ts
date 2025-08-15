@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	background: {
-		enable: true, // Enable background image
+		enable: false, // Enable background image
 		//src: "https://eo-pic.2x.nz/h", // Background image URL (supports HTTPS)
 		src: "https://bing.ee123.net/img", // Bing daily theme
 		position: "center", // Background position: 'top', 'center', 'bottom'
