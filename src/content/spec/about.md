@@ -46,6 +46,9 @@ Discord：https://discord.com/users/1068060784300658688
 
 ---
 
+# 2025/8/16
+因为 SVG 格式在没有 HarmonyOS Sans SC 字体的情况下无法正常显示这个字体（会显示为浏览器默认中文字体），所以本站使用 WebP 格式的 banner，大小 70.02 KB，相比 PNG 格式的 279.65 KB 减少了许多。
+
 # 2025/8/14
 用上了大佬插件 [@rehypejs/rehype-external-links](https://www.npmjs.com/package/rehype-external-links) ，这个插件可以让仅 Markdown 文件里面定义的链接以 `target="_blank` 的形式构建。也就是通过这个插件构建出来的超链接，点击后是通过新标签页打开的。而原来原版是直接在博客里，通过覆盖你正在阅读的文章来打开链接。  
 可以试试点这两个链接进行比对： [更改后](https://www.bing.com) &nbsp;|&nbsp; <a href="https://www.bing.com">更改前</a>
@@ -65,9 +68,10 @@ the error log is like driving with your eyes closed.
             —— Apache 官方文档 Getting Started 篇章
 ```
 
-除此之外，我在 `/public/` 中留了 3 个 banner 文件：
-- [/public/assets/apache_carbon.svg](/assets/apache_carbon.svg) ：由 [Carbon](https://github.com/carbon-app/carbon) 生成的 banner，`SVG` 格式（本站使用中）。 ![apache_carbon](/assets/apache_carbon.svg)
+除此之外，我在 `/public/` 中留了 4 个 banner 文件：
+- [/public/assets/apache_carbon.svg](/assets/apache_carbon.svg) ：由 [Carbon](https://github.com/carbon-app/carbon) 生成的 banner，`SVG` 格式。 ![apache_carbon](/assets/apache_carbon.svg)
 - [/public/assets/apache_carbon.png](/assets/apache_carbon.png) ：由 [Carbon](https://github.com/carbon-app/carbon) 生成的 banner，`PNG` 格式。
+- [/public/assets/apache_carbon.webp](/assets/apache_carbon.webp) ：由 [Carbon](https://github.com/carbon-app/carbon) 生成的 banner，`WebP` 格式。（本站使用中）
 - [/public/assets/apache.jpg](/assets/apache.jpg)：网传的图片 ![apache](/assets/apache.jpg)
 
 和一个 `JSON` 文件：

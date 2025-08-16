@@ -65,7 +65,7 @@ const isSunday = new Date().getDay() === 0;
         <div class="text-center text-sm text-neutral-500 dark:text-neutral-400 mt-3 pt-3 border-t border-neutral-200 dark:border-neutral-700">
             <div class="flex items-center justify-center gap-1">
                 <Icon name="ic:baseline-commit" class="text-base"></Icon>
-                <span><a id="github-commit-link" href="#" target="_blank">
+                <span><a id="github-commit-link" href="#">
                 <span id="github-commit">加载中...</span></a></span>
 
             </div>
@@ -192,7 +192,8 @@ fetch("https://v1.hitokoto.cn")
             
 
             if (link){
-            const gurl = "https://github.com/Ad-closeNN/blog-fuwari/commit/"+Data.sha;
+            // const gurl = "https://github.com/Ad-closeNN/blog-fuwari/commit/"+Data.sha;
+            const gurl = "/info/";
                 link.href = gurl;
                 link.title = "("+Data.commit.committer.date + ")" + " " + Data.commit.message;
             }
