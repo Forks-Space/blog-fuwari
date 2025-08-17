@@ -5,7 +5,6 @@ import { url } from "../../utils/url-utils";
 import ImageWrapper from "../misc/ImageWrapper.astro";
 
 const config = profileConfig;
-const isSunday = new Date().getDay() === 0;
 ---
 <div class="card-base p-3">
     <div class="text-center text-sm text-neutral-500 dark:text-neutral-400 border-neutral-100 dark:border-neutral-700">一言 / hitokoto</div>
@@ -30,16 +29,21 @@ const isSunday = new Date().getDay() === 0;
         <div class="h-1 w-5 bg-[var(--primary)] mx-auto rounded-full mb-2 transition"></div>
         
         <!-- bio: 名言部分 -->
-        <!-- 星期日 -->
+        <!-- 
+        
         { isSunday &&
         <div class="text-center text-neutral-400 mb-2.5 transition">调整你的步伐，跟着节拍摇摆，举起双手拥抱你想成为的人</div>
         }
 
-        <!-- 其他日 -->
+        
         { !isSunday &&
         <div class="text-center text-neutral-400 mb-2.5 transition">{config.bio}</div>
         }
+        -->
 
+        <div class="text-center text-neutral-400 mb-2.5 transition" id="bio"></div>
+
+        
         <div class="flex gap-2 justify-center mb-1">
             {config.links.length > 1 && config.links.map(item =>
                     <a rel="me" aria-label={item.name} href={item.url} target="_blank" class="btn-regular rounded-lg h-10 w-10 active:scale-90">
@@ -71,17 +75,64 @@ const isSunday = new Date().getDay() === 0;
             </div>
         </div>
 
-    <!-- 星期日 -->
-    { isSunday &&
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=86 src="https://music.163.com/outchain/player?type=2&id=2155423467&auto=0&height=66"></iframe>
-    }
+    <!-- 星期日等 -->
+    <div id="sunday-music"></div>
 
-    <!-- 其他日 -->
-    { !isSunday &&
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=86 src="https://music.163.com/outchain/player?type=2&id=2608813264&auto=0&height=66"></iframe>
-    }
     </div>
 </div>
+<!-- 名言 -->
+<script>
+    const bio = document.getElementById("bio");
+    if (bio){
+        const isSunday = new Date().getDay() === 0;
+        if (isSunday){
+            bio.textContent = "调整你的步伐，跟着节拍摇摆，举起双手拥抱你想成为的人"
+        }
+        else{
+            bio.textContent = "永远相信美好的事情即将发生";
+        }
+    }
+</script>
+
+<!-- 音乐 -->
+<script>
+(function () {
+  const sundayMusicElement = document.getElementById('sunday-music');
+  // 检查是否已经存在播放器
+  if (sundayMusicElement && sundayMusicElement.querySelector('iframe')) {
+    return; // 如果已经存在播放器，则不再添加
+  }
+  const isSunday = new Date().getDay() === 0;
+  if (!isSunday){
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('marginwidth', '0');
+    iframe.setAttribute('marginheight', '0');
+    iframe.width = '250';
+    iframe.height = '86';
+    iframe.src = 'https://music.163.com/outchain/player?type=2&id=2608813264&auto=0&height=66';
+    const sundayMusicElement = document.getElementById('sunday-music');
+    if (sundayMusicElement) {
+        sundayMusicElement.appendChild(iframe);
+    }
+  }
+  else{
+  const iframe = document.createElement('iframe');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('marginwidth', '0');
+  iframe.setAttribute('marginheight', '0');
+  iframe.width = '250';
+  iframe.height = '86';
+  iframe.src = 'https://music.163.com/outchain/player?type=2&id=2155423467&auto=0&height=66';
+
+  const sundayMusicElement = document.getElementById('sunday-music');
+  if (sundayMusicElement) {
+      sundayMusicElement.appendChild(iframe);
+  }
+  
+  }
+})();
+</script>
 
 <script>
 // 傻逼脑子 Merge 的时候怎么把这个删了
@@ -152,7 +203,6 @@ fetch("https://v1.hitokoto.cn")
     // 页面加载完成后获取统计数据
     document.addEventListener('DOMContentLoaded', loadSiteStats);
 </script>
-
 <!-- 获取 Commit 信息 via API -->
 <script>
     async function loadCommitStats() {
