@@ -49,7 +49,7 @@ category: 教程
 - 仓库：如果你选择上面第一种方案（在博客仓库内），那么就填写**你博客仓库地址**（以 `用户名/仓库名` 形式填写，填你自己的。比如 `Ad-closeNN/blog-fuwari`）。如果是新的专用仓库，那么就填写**新的专用仓库地址**，格式同理。成功了为如图所示： ![giscus-repo-successful](../assets/images/giscus-repo-successful.png)
 - 页面 ↔️ discussion 映射关系：这个有说法。如果你博客没有很多重复标题的页面，**且不更换文章标题**，推荐选择 **Discussion 的标题包含页面的 `<title>`**，这将会以 `页面标题 -或/或其他分隔符 网站名` 为 title 开一个新讨论。如： ![github-giscus-conversation](../assets/images/github-giscus-conversation.png) 其他如 `pathname`，将会把 `/post/xxx` 显示出来。但是显示效果（特别是中文路径）可能没那么好？  
 参考&图片原出处： https://www.2x.nz/posts/you-is-me-huh/ ![image.png](https://www.2x.nz/assets/images/2025-08-12-15-45-18-image.png)  
-- Discussion 分类：推荐选择 **General**。如果你只想让访客在博客发布评论，就选择 **Announcements**。这样即使在
+- Discussion 分类：推荐选择 **General**。如果你只想让访客在博客发布评论，就选择 **Announcements**。这样即使能在 GitHub 看到评论，也无法直接在 GitHub 回复，必须在博客的评论区内回复。没啥用，不如 **General*。
 - 特性：推荐启用 `启用主帖子上的反应（reaction）` `将评论框放在评论上方` `懒加载评论`。
 - 其他无关紧要的请自行配置。
 
