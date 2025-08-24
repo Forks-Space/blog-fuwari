@@ -1,0 +1,21 @@
+name: "必应 IndexNow 提交"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: submit-to-bing
+        uses: bojieyang/indexnow-action@v1
+        with:
+          sitemap-location: "https://adclosenn.top/sitemap-0.xml"
+          endpoint: "www.bing.com"
+          since: 1
+          since-unit: "day"
+          limit: 100
+          key: ${{ secrets.INDEXNOW_KEY }}
+          key-location: ${{ secrets.INDEXNOW_KEY_LOCATION }}
