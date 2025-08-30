@@ -39,7 +39,6 @@ const hasBannerLink = !!siteConfig.banner.credit.url;
 const mainPanelTop = siteConfig.banner.enable
 	? `calc(${BANNER_HEIGHT}vh - ${MAIN_PANEL_OVERLAPS_BANNER_HEIGHT}rem)`
 	: "5.5rem";
-
 ---
 
 <Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
@@ -52,21 +51,13 @@ const mainPanelTop = siteConfig.banner.enable
     </div>
 </div>
 
-<!-- Banner - 渲染两套，客户端控制显示 -->
-<!-- 默认banner -->
-{siteConfig.banner.enable && <div id="banner-wrapper-default" class={`absolute z-10 w-full transition duration-700 overflow-hidden`} style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
-    <ImageWrapper id="banner-default" alt="Banner image of the blog" class:list={["object-cover h-full transition duration-700 opacity-0"]}
-                  src={siteConfig.banner.src} position={siteConfig.banner.position}>
+<!-- Banner -->
+{siteConfig.banner.enable && <div id="banner-wrapper" class={`absolute z-10 w-full transition duration-700 overflow-hidden`} style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
+    <ImageWrapper id="banner" alt="Banner image of the blog" class:list={["object-cover h-full transition duration-700 opacity-0 scale-105"]}
+                  src={siteConfig.banner.src} position={siteConfig.banner.position}
+    >
     </ImageWrapper>
 </div>}
-
-<!-- 周日banner -->
-{siteConfig.banner.enable && <div id="banner-wrapper-sunday" class={`absolute z-10 w-full transition duration-700 overflow-hidden hidden`} style={`top: -${BANNER_HEIGHT_EXTEND}vh`}>
-    <ImageWrapper id="banner-sunday" alt="Sunday banner image" class:list={["object-cover h-full transition duration-700 opacity-0"]}
-                  src={"/assets/132398672_p0_master1200_edited.jpg"} position={siteConfig.banner.position}>
-    </ImageWrapper>
-</div>}
-
 
 <!-- Main content -->
 <div class="absolute w-full z-30 pointer-events-none" style={`top: ${mainPanelTop}`}>
@@ -75,28 +66,20 @@ const mainPanelTop = siteConfig.banner.enable
         <div id="main-grid" class="transition duration-700 w-full left-0 right-0 grid grid-cols-[17.5rem_auto] grid-rows-[auto_1fr_auto] lg:grid-rows-[auto]
     mx-auto gap-4 px-0 md:px-4"
         >
-            <!-- Banner credits - 渲染两套 -->
-            <!-- 默认banner credit -->
-            {hasBannerCredit && <a href={siteConfig.banner.credit.url} id="banner-credit-default" target="_blank" rel="noopener" aria-label="Visit image source"
-                               class:list={["group onload-animation transition-all absolute flex justify-center items-center rounded-full " +
-                               "px-3 right-4 -top-[3.25rem] bg-black/60 hover:bg-black/70 h-9", {"hover:pr-9 active:bg-black/80": hasBannerLink}]}>
-                <Icon class="text-white/75 text-[1.25rem] mr-1" name="material-symbols:copyright-outline-rounded"></Icon>
+            <!-- Banner image credit -->
+            {hasBannerCredit && <a href={siteConfig.banner.credit.url} id="banner-credit" target="_blank" rel="noopener" aria-label="Visit image source"
+                                   class:list={["group onload-animation transition-all absolute flex justify-center items-center rounded-full " +
+                                   "px-3 right-4 -top-[3.25rem] bg-black/60 hover:bg-black/70 h-9", {"hover:pr-9 active:bg-black/80": hasBannerLink}]}
+            >
+                <Icon class="text-white/75 text-[1.25rem] mr-1" name="material-symbols:copyright-outline-rounded" ></Icon>
                 <div class="text-white/75 text-xs">{siteConfig.banner.credit.text}</div>
                 <Icon class:list={["transition absolute text-[oklch(0.75_0.14_var(--hue))] right-4 text-[0.75rem] opacity-0",
-                    {"group-hover:opacity-100": hasBannerLink}]} name="fa6-solid:arrow-up-right-from-square">
+                    {"group-hover:opacity-100": hasBannerLink}]}
+                      name="fa6-solid:arrow-up-right-from-square">
                 </Icon>
             </a>}
 
-            <!-- 周日banner credit -->
-            {hasBannerCredit && <a href="https://www.pixiv.net/artworks/132398672" id="banner-credit-sunday" target="_blank" rel="noopener" aria-label="Visit image source"
-                               class:list={["hidden group onload-animation transition-all absolute flex justify-center items-center rounded-full " +
-                               "px-3 right-4 -top-[3.25rem] bg-black/60 hover:bg-black/70 h-9", {"hover:pr-9 active:bg-black/80": hasBannerLink}]}>
-                <Icon class="text-white/75 text-[1.25rem] mr-1" name="material-symbols:copyright-outline-rounded"></Icon>
-                <div class="text-white/75 text-xs">Pixiv @KiraraShss</div>
-                <Icon class:list={["transition absolute text-[oklch(0.75_0.14_var(--hue))] right-4 text-[0.75rem] opacity-0",
-                    {"group-hover:opacity-100": hasBannerLink}]} name="fa6-solid:arrow-up-right-from-square">
-                </Icon>
-            </a>}
+
             <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
 
             <main id="swup-container" class="transition-swup-fade col-span-2 lg:col-span-1 overflow-hidden">
@@ -139,55 +122,4 @@ const mainPanelTop = siteConfig.banner.enable
         {!siteConfig.toc.enable && <div id="toc"></div>}
     </div>
 </div>
-
-<script is:inline>
-document.addEventListener('DOMContentLoaded', function() {
-    const currentDay = new Date().getDay();
-    const isSunday = currentDay === 0;
-    const isSaturday = currentDay === 6;
-    
-    // 控制banner显示
-    const defaultBanner = document.getElementById('banner-wrapper-default');
-    const sundayBanner = document.getElementById('banner-wrapper-sunday');
-    const defaultCredit = document.getElementById('banner-credit-default');
-    const sundayCredit = document.getElementById('banner-credit-sunday');
-    
-    if (isSunday) {
-        // 显示周日版本
-        if (defaultBanner) defaultBanner.style.display = 'none';
-        if (sundayBanner) {
-            sundayBanner.style.display = 'block';
-            sundayBanner.id = 'banner-wrapper'; // 添加这行，设置正确的ID
-            // 移除图片透明度，让图片显示出来
-        }
-        const sundayImg = sundayBanner.querySelector('#banner-sunday');
-        if (sundayImg) {
-            sundayImg.id = 'banner'; // 添加这行，设置正确的ID
-            sundayImg.classList.remove('opacity-0');
-            sundayImg.classList.add('opacity-100');
-        }
-        if (defaultCredit) defaultCredit.classList.add('hidden');
-        if (sundayCredit) sundayCredit.classList.remove('hidden');
-    } else {
-        // 显示默认版本
-        if (defaultBanner) {
-            defaultBanner.style.display = 'block';
-            defaultBanner.id = 'banner-wrapper';
-            // 修改这里，直接使用原始ID查询
-            const defaultBannerInner = document.getElementById('banner-default');
-            if (defaultBannerInner) {
-                defaultBannerInner.id = 'banner';
-                defaultBannerInner.classList.remove('opacity-0');
-                defaultBannerInner.classList.add('opacity-100');
-            }
-        }
-    }
-    
-    // 周六弹窗逻辑（只在真正的周六显示）
-    if (isSaturday && !localStorage.getItem("hasSeenPopup")) {
-        alert("网站可能会在每个周日变个样...\n点击确认后将不再显示此弹窗");
-        localStorage.setItem("hasSeenPopup", "true");
-    }
-});
-</script>
 </Layout>

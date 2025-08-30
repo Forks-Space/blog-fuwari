@@ -14,24 +14,12 @@ export function getDefaultHue(): number {
 }
 
 export function getHue(): number {
-	const currentDay = new Date().getDay();
-	// 去你妈的给我查日期先
-	if (currentDay === 0){
-		return 290;
-	}
-	// 如果不是，则返回默认值
 	const stored = localStorage.getItem("hue");
 	return stored ? Number.parseInt(stored) : getDefaultHue();
 }
 
 export function setHue(hue: number): void {
-	const currentDay = new Date().getDay();
-	if (currentDay === 0){
-		//
-	}
-	if (currentDay != 0){
-		localStorage.setItem("hue", String(hue));
-	}
+	localStorage.setItem("hue", String(hue));
 	const r = document.querySelector(":root") as HTMLElement;
 	if (!r) {
 		return;

@@ -2,15 +2,7 @@
 
 import { siteConfig } from "../config";
 
-// 周日判断
-const isSunday = new Date().getDay() === 0;
-
-// 这tm重置色
 ---
-{isSunday &&
-    <div id="config-carrier" data-hue={290}></div>
-}
-{!isSunday &&
-    <div id="config-carrier" data-hue={siteConfig.themeColor.hue}></div>
-}
 
+<div id="config-carrier" data-hue={siteConfig.themeColor.hue}>
+</div>

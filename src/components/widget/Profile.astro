@@ -29,19 +29,7 @@ const config = profileConfig;
         <div class="h-1 w-5 bg-[var(--primary)] mx-auto rounded-full mb-2 transition"></div>
         
         <!-- bio: 名言部分 -->
-        <!-- 
-        
-        { isSunday &&
-        <div class="text-center text-neutral-400 mb-2.5 transition">调整你的步伐，跟着节拍摇摆，举起双手拥抱你想成为的人</div>
-        }
-
-        
-        { !isSunday &&
         <div class="text-center text-neutral-400 mb-2.5 transition">{config.bio}</div>
-        }
-        -->
-
-        <div class="text-center text-neutral-400 mb-2.5 transition" id="bio"></div>
 
         
         <div class="flex gap-2 justify-center mb-1">
@@ -80,20 +68,6 @@ const config = profileConfig;
 
     </div>
 </div>
-<!-- 名言 -->
-<script>
-    const bio = document.getElementById("bio");
-    if (bio){
-        const isSunday = new Date().getDay() === 0;
-        if (isSunday){
-            bio.textContent = "调整你的步伐，跟着节拍摇摆，举起双手拥抱你想成为的人"
-        }
-        else{
-            bio.textContent = "永远相信美好的事情即将发生";
-        }
-    }
-</script>
-
 <!-- 音乐 -->
 <script>
 (function () {
@@ -110,7 +84,7 @@ const config = profileConfig;
     iframe.setAttribute('marginheight', '0');
     iframe.width = '250';
     iframe.height = '86';
-    iframe.src = 'https://music.163.com/outchain/player?type=2&id=2608813264&auto=0&height=66';
+    iframe.src = 'https://music.163.com/outchain/player?type=2&id=411500345&auto=1&height=66';
     const sundayMusicElement = document.getElementById('sunday-music');
     if (sundayMusicElement) {
         sundayMusicElement.appendChild(iframe);

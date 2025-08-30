@@ -1,16 +1,17 @@
 # 关于 / Hi there!
-既然你来到了这里，就说明你在访问由 [Netlify](https://www.netlify.com) 托管的 [adclosenn.top](https://adclosenn.top)。本站 Netlify 优选 IP：`3.33.186.135`
+既然你来到了这里，就说明你在访问由 [Netlify](https://www.netlify.com) 托管的 [adclosenn.top](https://adclosenn.top)。本站 Netlify Amazon CDN 优选 IP：`3.33.186.135`
 
-本站使用 [@satcaca/fuwari](https://github.com/saicaca/fuwari) 博客模板，部分代码来源于 [@afoim/fuwari](https://github.com/afoim/fuwari)。嗯，真漂亮，真好用。
+本站使用 [@saicaca/fuwari](https://github.com/saicaca/fuwari) 博客模板，部分代码来源于 [@afoim/fuwari](https://github.com/afoim/fuwari)。嗯，真漂亮，真好用。
 
 ::github{repo="saicaca/fuwari"}
 ::github{repo="withastro/astro"}
+::github{repo="Ad-closeNN/blog-fuwari"}
 ::github{repo="afoim/fuwari"}
 
 # 域名
-目前你现在见到的，也就是 [adclosenn.top](https://adclosenn.top) 。除了这个，我还有其他的域名（部分）：
+目前你现在见到的，也就是 [adclosenn.top](https://adclosenn.top) 。除了这个，还有其他的域名（部分）：
 
-1. adclosenn.top
+1. adclosenn.dev
 2. 19991230.xyz
 3. adsb.dpdns.org
 4. adclosenn.dpdns.org
@@ -42,9 +43,13 @@ Discord：https://discord.com/users/1068060784300658688
 ](/posts/umami/) 。
 
 ## 音乐
-使用的是 [网易云音乐外链播放器（iframe 插件）](https://music.163.com/#/outchain/2/2608813264/) 。
+使用的是 [网易云音乐外链播放器（iframe 插件）](https://music.163.com/#/outchain/2/411500345/) 。
 
 ---
+
+# 2025/8/31
+1. 移除知更鸟主题。但未移除相关图片。
+2. 加入一个新[备案](https://icp.redcha.cn/beian/ICP-2025080144.html)。
 
 # 2025/8/16
 因为 SVG 格式在没有 HarmonyOS Sans SC 字体的情况下无法正常显示这个字体（会显示为浏览器默认中文字体），所以本站使用 WebP 格式的 banner，大小 70.02 KB，相比 PNG 格式的 279.65 KB 减少了许多。
