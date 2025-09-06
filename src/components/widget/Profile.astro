@@ -63,49 +63,10 @@ const config = profileConfig;
             </div>
         </div>
 
-    <!-- 星期日等 -->
-    <div id="sunday-music"></div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=86 src="//music.163.com/outchain/player?type=2&id=411500345&auto=0&height=66"></iframe>
 
     </div>
 </div>
-<!-- 音乐 -->
-<script>
-(function () {
-  const sundayMusicElement = document.getElementById('sunday-music');
-  // 检查是否已经存在播放器
-  if (sundayMusicElement && sundayMusicElement.querySelector('iframe')) {
-    return; // 如果已经存在播放器，则不再添加
-  }
-  const isSunday = new Date().getDay() === 0;
-  if (!isSunday){
-    const iframe = document.createElement('iframe');
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('marginwidth', '0');
-    iframe.setAttribute('marginheight', '0');
-    iframe.width = '250';
-    iframe.height = '86';
-    iframe.src = 'https://music.163.com/outchain/player?type=2&id=411500345&auto=1&height=66';
-    const sundayMusicElement = document.getElementById('sunday-music');
-    if (sundayMusicElement) {
-        sundayMusicElement.appendChild(iframe);
-    }
-  }
-  else{
-  const iframe = document.createElement('iframe');
-  iframe.setAttribute('frameborder', '0');
-  iframe.setAttribute('marginwidth', '0');
-  iframe.setAttribute('marginheight', '0');
-  iframe.width = '250';
-  iframe.height = '86';
-  iframe.src = 'https://music.163.com/outchain/player?type=2&id=2155423467&auto=0&height=66';
-
-  const sundayMusicElement = document.getElementById('sunday-music');
-  if (sundayMusicElement) {
-      sundayMusicElement.appendChild(iframe);
-  }
-  
-  }
-})();
 </script>
 
 <script>

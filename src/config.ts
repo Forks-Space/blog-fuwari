@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
 	background: {
 		enable: false, // Enable background image
 		//src: "https://eo-pic.2x.nz/h", // Background image URL (supports HTTPS)
-		src: "https://bing.ee123.net/img", // Bing daily theme
+		src: "", // Bing daily theme
 		position: "center", // Background position: 'top', 'center', 'bottom'
 		size: "cover", // Background size: 'cover', 'contain', 'auto'
 		repeat: "no-repeat", // Background repeat: 'no-repeat', 'repeat', 'repeat-x', 'repeat-y'
