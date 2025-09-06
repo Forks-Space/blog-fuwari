@@ -30,6 +30,9 @@ export default defineConfig({
 	site: "https://adclosenn.top",
 	base: "/",
 	trailingSlash: "always",
+	prefetch: {
+		prefetchAll: true
+	  },
 	integrations: [
 		tailwind({
 			nesting: true,
