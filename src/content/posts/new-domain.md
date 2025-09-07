@@ -8,6 +8,18 @@ category: 记录
 draft: false
 ---
 
+# .dev 域名
+:::note[感谢]
+感谢 [MC_Kero blog](https://blog.mckero.com) 的站长 [MC_Kero](https://github.com/MCKero6423) 提供的 [GitHub Student Developer Pack](https://education.github.com/pack) 免费**一年域名**福利！~~都给我去 Follow 他~~  
+
+- 域名：`adclosenn.dev`
+- 时长：1 年（2025-08-23 13:11:27 UTC -> 2026-08-23 13:11:27 UTC）
+:::
+
+::github{repo="MCKero6423/fuwari"}
+
+目前访问 [adclosenn.dev](https://adclosenn.dev) 会直接 302 跳转回 adclosenn.top。
+
 # .xyz 域名
 :::warning[注意]
 如无特殊指代，阿里云指[阿里云（国内站）](https://wanwang.aliyun.com/domain)。
